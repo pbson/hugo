@@ -6,7 +6,8 @@
   "steps": {
     "build": {
       "inputs": ["...", { "step": "packages:mise" }],
-      "commands": ["...", "hugo --minify --baseURL / --destination public"]
+      "variables": { "MISE_DATA_DIR": "/mise" },
+      "commands": ["...", { "path": "/mise/shims" }, "hugo --minify --baseURL / --destination public"]
     }
   }
 }
