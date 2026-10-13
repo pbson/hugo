@@ -5,7 +5,7 @@
   },
   "steps": {
     "build": {
-      "inputs": ["...", { "step": "packages:mise" }],
+      "inputs": ["...", { "step": "packages:mise", "include": ["/mise", "/usr/local/bin/mise", "/etc/mise/config.toml"] }],
       "variables": { "MISE_DATA_DIR": "/mise" },
       "commands": ["...", { "path": "/mise/shims" }, "hugo --minify --baseURL / --destination public"]
     }
