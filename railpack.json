@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "packages": {
+    "hugo": "0.147.0"
+  },
+  "steps": {
+    "build": {
+      "inputs": ["...", { "step": "packages:mise" }],
+      "commands": ["...", "hugo --minify --baseURL / --destination public"]
+    }
+  }
+}
